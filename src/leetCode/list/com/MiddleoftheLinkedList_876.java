@@ -4,7 +4,7 @@
 　 * @author GuoMell
 　 * @date 2020年3月23日下午10:40:03
 */
-package list.com;
+package leetCode.list.com;
 
 import leetCode.daily.com.ListNode;
 
