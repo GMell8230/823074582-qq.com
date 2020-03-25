@@ -13,7 +13,7 @@ public class A0152_MaximumProductSubarray {
 			if (nums[i] < 0) {
 				int temp = imax;
 				imax = imin;
-				imin = imax;
+				imin = temp;
 			}
 			imax = Math.max(imax*nums[i], nums[i]);
 			imin = Math.min(imin*nums[i], nums[i]);
