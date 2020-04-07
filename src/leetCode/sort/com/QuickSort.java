@@ -30,6 +30,7 @@ public class QuickSort<T extends Comparable<T>> extends Sort<T> {
         List<Comparable> list = Arrays.asList(nums);
         Collections.shuffle(list);
         list.toArray(nums);
+        
     }
     
     private int partition(T[] nums, int l, int h) {
