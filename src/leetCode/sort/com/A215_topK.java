@@ -14,7 +14,7 @@ public class A215_topK {
 	    Arrays.sort(nums);
 	    return nums[nums.length - k];
 	}
-	//快排
+	//堆排
 	public int findKthLargest1(int[] nums, int k) {
 		PriorityQueue<Integer> pq = new PriorityQueue<Integer>();//小顶堆
 		for (int i : nums) {
