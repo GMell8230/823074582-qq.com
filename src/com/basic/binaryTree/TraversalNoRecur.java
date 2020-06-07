@@ -13,27 +13,6 @@ import com.swordOffer.core.TreeNode;
 */
 public class TraversalNoRecur {
 	//1.前序
-	public ArrayList<Integer> preTraversal(TreeNode root) {
-		ArrayList<Integer> res = new ArrayList<>();
-		if (root == null) {
-			return res;
-		}
-		Stack<TreeNode> st = new Stack<TreeNode>();
-		st.add(root);
-		while(!st.empty()) {
-			TreeNode cur = st.pop();
-			if (cur.right != null) {
-				st.push(cur.right);
-			}
-			if (cur.left != null) {
-				st.push(cur.left);
-			}
-			res.add(cur.val);
-		}
-		return res;
-	}
-	
-	//1.前序
 		public ArrayList<Integer> preTraversal2(TreeNode root) {
 			ArrayList<Integer> res = new ArrayList<>();
 			if (root == null) {
@@ -91,8 +70,11 @@ public class TraversalNoRecur {
 			//要保证当前节点的左右子树都已经访问了才能访问当前节点
 			if (cur.right == null || cur.right == last) {
 				res.add(cur.val);
+			    // 记录上一个访问的节点
+	            // 用于判断“访问根节点之前，右子树是否已访问过”
 				st.pop();
 				last = cur;
+				// 表示不需要转向，继续弹栈
 				cur = null;
 			}else {
 				cur = cur.right;
